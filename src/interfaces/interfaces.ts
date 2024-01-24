@@ -1,3 +1,5 @@
+import { ObjectId } from "mongoose";
+
 interface Iposts {
   id: String;
   created_time: Date;
