@@ -1,4 +1,4 @@
-## Sauvergarde des publications Facebook d'un utilisateur dans mongoDB avec node JS + express JS
+## Sauvergarde des publications Facebook d'un utilisateur dans mongoDB avec node JS + express JS , utilisant graph API pour récupérer les données depuis Facebook
 
 ### Lancer le projet sur local
 -   Installer les packages:
