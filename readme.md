@@ -7,7 +7,7 @@
    npm  install
 ```
 
--   Créer un compte développeur sur [developers.facebook.com](https://developers.facebook.com/) et remplacer dans le fichier .env par votre userID et votre access_token
+-   Créer un compte développeur sur [developers.facebook.com](https://developers.facebook.com/)
 
 
 -   Remplacer dans le fichier .env par votre URI l' URI de mongoDB en local
