@@ -7,8 +7,19 @@ class postsController {
       const { userID, access_token } = req.body;
       let getPost = await postsHelper.fetchPosts(userID, access_token);
 
-      if (getPost){
-        
+      if (getPost) {
+        let postsSaved = await postsHelper.savePosts(getPost);
+
+        if (postsSaved) {
+          res.status(200).json({
+            message: "publications sauvegardés avec succés",
+            postsSaved,
+          });
+        } else {
+          res
+            .status(500)
+            .json("erreur lors de l' ajout des posts dans la base de données");
+        }
       }
     } catch (err) {
       console.error(err);
@@ -16,3 +27,5 @@ class postsController {
     }
   }
 }
+
+export default postsController;

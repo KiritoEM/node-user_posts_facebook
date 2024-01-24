@@ -1,30 +1,33 @@
-import { ObjectId } from "mongoose";
+interface IImageAttachment {
+  media: {
+    image: {
+      height: number;
+      src: string;
+      width: number;
+    };
+  };
+  target: {
+    id: string;
+    url: string;
+  };
+  title: string;
+  type: string;
+  url: string;
+}
 
-interface Iposts {
-  id: String;
+interface INativeTemplateAttachment {
+  description: string;
+  title: string;
+  type: string;
+}
+
+interface Iposts extends Document {
+  id: string;
   created_time: Date;
-  message: String;
+  message: string;
   attachments: {
-    data: [
-      {
-        media: {
-          image: {
-            height: Number;
-            src: String;
-            width: Number;
-          };
-        };
-        target: {
-          id: String;
-          url: String;
-        };
-        title: String;
-        type: String;
-        url: String;
-        description: String;
-      }
-    ];
+    data: (IImageAttachment | INativeTemplateAttachment)[];
   };
 }
 
-export { Iposts };
+export { Iposts, INativeTemplateAttachment, IImageAttachment };
