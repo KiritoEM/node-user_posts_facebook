@@ -9,7 +9,7 @@
 
 -   Créer un compte développeur sur [developers.facebook.com](https://developers.facebook.com/)
 
--   API à utiliser pour poster et fetcher les publications Facebook sur votre clients API:
+-   API à utiliser pour fetcher les publications Facebook sur votre clients API et les sauvegarder dans mongoDB:
 ```bash
    http://localhost:8000/posts/fetchAPI
 ```
