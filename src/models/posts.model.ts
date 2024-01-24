@@ -1,26 +1,33 @@
 import { Schema, model } from "mongoose";
-import { Ipokemon } from "../interfaces/interfaces";
+import { Iposts } from "../interfaces/interfaces";
 
 const postsSchema = new Schema({
-  name: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  type: {
-    type: String,
-    required: true,
-  },
-  level: {
-    type: Number,
-    default: 1,
-  },
-  attacks_type: {
-    basic: { type: String },
-    special: { type: String },
+  id: String,
+  created_time: Date,
+  message: String,
+  attachments: {
+    data: [
+      {
+        media: {
+          image: {
+            height: Number,
+            src: String,
+            width: Number,
+          },
+        },
+        target: {
+          id: String,
+          url: String,
+        },
+        title: String,
+        type: String,
+        url: String,
+        description: String,
+      },
+    ],
   },
 });
 
-const pokemon = model<Ipokemon>("Pokemon", postsSchema);
+const postsModel = model<Iposts>("Posts", postsSchema);
 
-export default pokemon;
+export default postsModel;
