@@ -9,7 +9,7 @@ import postRoutes from "./../routes/posts.routes";
 dotenv.config();
 const app: Application = express();
 
-//middalware
+//middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());

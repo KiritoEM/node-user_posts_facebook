@@ -10,7 +10,7 @@ const ConnectDB = async () => {
 
     mongoose.connect(process.env.MONGODB_COMPASS_URI);
 
-    console.log("Connexion réussie avec MongoDB ...");
+    console.log("Connexion succesfully with mongoDB...");
   } catch (err) {
     console.log(err);
     console.log("connexion failed with Database");
