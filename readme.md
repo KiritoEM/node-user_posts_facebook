@@ -1,4 +1,4 @@
-## Sauvergarde des publications facebook d'un utilisateur dans mongoDB avec node JS + express JS
+## Sauvergarde des publications Facebook d'un utilisateur dans mongoDB avec node JS + express JS
 
 ### Lancer le projet sur local
 -   Installer les packages:
@@ -9,8 +9,14 @@
 
 -   Créer un compte développeur sur [developers.facebook.com](https://developers.facebook.com/)
 
+-   API à utiliser pour poster et fetcher les publications Facebook sur votre clients API:
+```bash
+   http://localhost:8000/posts/fetchAPI
+```
 
--   Remplacer dans le fichier .env par votre URI l' URI de mongoDB en local
+-   Entrez dans le body de votre clients API en JSON les champs : userID et access_token
+
+-   Remplacer dans le fichier .env par votre URI l' URI de mongoDB en local et votre PORT
 
 - Lancer le serveur
 
